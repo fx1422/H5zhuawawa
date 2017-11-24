@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>游奇互娱-抓娃娃</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="libs/jquery.swiper.min/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/room.css">
+
+</head>
+<body>
+<div class="content">
+    <!--header-->
+    <header>
+        <span></span>
+    </header>
+    <!--video--box-->
+    <div class="video-box">
+        <div class="onlineUser">
+            <span class="onlineNum">
+                <em>53人</em>
+                <i>在房间</i>
+            </span>
+            <span class="iconBox">
+                <img src="img/room/icon.jpg" alt="">
+                <img src="img/room/icon.jpg" alt="">
+                <img src="img/room/icon.jpg" alt="">
+                <img src="img/room/icon.jpg" alt="">
+                <img src="img/room/icon.jpg" alt="">
+                <img src="img/room/icon.jpg" alt="">
+                <img src="img/room/icon.jpg" alt="">
+            </span>
+        </div>
+        <div class="marquee">
+            <marquee behavior="scroll">
+                <span>18分钟前 “Devil” 抓中</span>
+            </marquee>
+        </div>
+        <div class="musicSwitch playMusic">
+            <audio id="bgMusic" src="mp3/room_bg_music.mp3" autoplay="autoplay" preload="" loop="loop"></audio>
+        </div>
+        <div class="video">
+            <img id="video" src="" style="width: 100%;margin-top: -12%">
+        </div>
+    </div>
+    <!--手柄操作区域-->
+    <div class="handler-box">
+        <!-----观看区域显示---->
+        <div class="noPlay">
+            <div class="left"></div>
+            <div class="goCatch mid"><span class="top">开始抓娃娃</span><span class="bot"><i>19／次</i></span></div>
+            <div class="right"><h2>我的豌豆</h2>
+                <div class="recharge"><span>5555</span></div>
+            </div>
+        </div>
+        <!------playing------>
+        <div class="playing" style="display: none">
+            <div class="left">
+                <div id="up" class="btn "></div>
+                <div id="right" class="btn"></div>
+                <div id="down" class="btn"></div>
+                <div id="left" class="btn"></div>
+            </div>
+            <div class="right catch"></div>
+        </div>
+    </div>
+
+    <!-----列表显示区域----->
+    <div class="shows-box">
+        <nav class="navHeader">
+            <ul>
+                <li class="active" data-num="0">娃娃展示</li>
+                <li data-num="1">抓取达人</li>
+                <li data-num="2">抓取记录</li>
+            </ul>
+        </nav>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!--showing-->
+                <div class="swiper-slide">
+                    <div class="item">
+                        <img src="img/room/act_bg.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="img/room/bot_bg.jpg" alt="">
+                    </div>
+                </div>
+                <!--catch-ranking-->
+                <div class="swiper-slide">
+                    <ul>
+                        <li>
+                            <div class="left">
+                                <img src="img/room/icon.jpg" alt=""><span>你好啊</span>
+                            </div>
+                            <div class="right">抓取3个</div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <img src="img/room/icon.jpg" alt=""><span>你好啊</span>
+                            </div>
+                            <div class="right">抓取3个</div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <img src="img/room/icon.jpg" alt=""><span>你好啊</span>
+                            </div>
+                            <div class="right">抓取3个</div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <img src="img/room/icon.jpg" alt=""><span>你好啊</span>
+                            </div>
+                            <div class="right">抓取3个</div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <img src="img/room/icon.jpg" alt=""><span>你好啊</span>
+                            </div>
+                            <div class="right">抓取3个</div>
+                        </li>
+                    </ul>
+                </div>
+                <!--catch--Record-->
+                <div class="swiper-slide">
+                    <ul>
+                        <li>
+                            <div class="left">
+                                <img src="img/room/icon.jpg" alt=""><span>你好啊</span>
+                            </div>
+                            <div class="right">抓取3个</div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <img src="img/room/icon.jpg" alt=""><span>你好啊</span>
+                            </div>
+                            <div class="right">抓取3个</div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <img src="img/room/icon.jpg" alt=""><span>你好啊</span>
+                            </div>
+                            <div class="right">抓取3个</div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <img src="img/room/icon.jpg" alt=""><span>你好啊</span>
+                            </div>
+                            <div class="right">抓取3个</div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <img src="img/room/icon.jpg" alt=""><span>你好啊</span>
+                            </div>
+                            <div class="right">抓取3个</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="libs/rem/rem.js"></script>
+<script src="libs/iscroll/iscroll.js"></script>
+<script src="libs/jquery/jquery2.1.3.min.js"></script>
+<script src="libs/jquery.swiper.min/swiper-3.4.2.jquery.min.js"></script>
+<script src="libs/fastclick/fastclick.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        (function audioAutoPlay() {
+            const audio = document.getElementById('bgMusic');
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+        })();
+    });
+    $(function () {
+        FastClick.attach(document.body);
+        /*滑动切换*/
+        const swiper = new Swiper('.swiper-container', {
+
+            onSlideChangeStart: function (swiper) {
+                const page_id = swiper.activeIndex;
+                $('.navHeader ul li').removeClass('active').eq(page_id).addClass('active')
+            }
+        });
+        /*点击菜单切换*/
+        $('.navHeader ul li').click(function () {
+
+            $('.navHeader ul li').removeClass('active');
+            $(this).addClass('active');
+
+            const show_id = $(this).data('num');
+            swiper.slideTo(show_id, 500, false);
+        });
+        /*---开始抓取----*/
+        $(".goCatch").on('click', function () {
+            showHandler()
+        });
+        $(".catch").on('click', function () {
+            hideHandler()
+        });
+        /*----musicPlay----*/
+        $(".musicSwitch").on('click', function () {
+            $(this).toggleClass('playMusic');
+            const flag = $(this).hasClass('playMusic');
+            bgMusicPlay(flag);
+        })
+
+
+    });
+
+    /**
+     * 背景音乐控制
+     * [flag]标志
+     * */
+    function bgMusicPlay(flag) {
+        const vid = document.getElementById('bgMusic');
+        if (!flag) {
+            vid.pause()
+        } else {
+            vid.play()
+        }
+    }
+
+    function showHandler() {
+        $(".noPlay").hide();
+        $(".playing").show();
+    }
+
+    function hideHandler() {
+        $(".noPlay").show();
+        $(".playing").hide();
+    }
+
+
+    /**
+     * 获取列表数据
+     * @type {{getCatchRank: (function())}}
+     */
+    const rankApi = {
+        getCatchRank() {
+            return new Promise((resolve, reject) => {
+                $.ajax({
+                    url: '',
+                    type: 'POST',
+                    success: function (data) {
+                        console.log(data)
+                    }
+                })
+            })
+
+
+        }
+    };
+
+
+    !(function () {
+        const wsUri = "ws://wwj-video.aiwanba.com:3001/websocket?id=A0002&userid=wb5WcPmBD0TatYl96bg552un06Dp59&platform=H5";
+        let output;
+
+        function init() {
+            output = $("#video");
+            testWebSocket();
+        }
+
+        function testWebSocket() {
+            websocket = new WebSocket(wsUri);
+
+            websocket.onopen = function (evt) {
+                console.log('open')
+            };
+
+            websocket.onmessage = function (evt) {
+                console.log(evt);
+                blobToDataURL(evt.data, function (res) {
+                    output.attr('src', res);
+                    setTimeout(()=>{
+                        websocket.send('A0002')
+                    },20)
+                })
+            };
+            websocket.onerror = function (evt) {
+                console.log(evt)
+            };
+        }
+
+        window.addEventListener("load", init, false);
+
+        /**
+         * blob转base64
+         * @param blob
+         * @param callback
+         */
+        function blobToDataURL(blob, callback) {
+            const a = new FileReader();
+            a.onload = function (e) {
+                callback(e.target.result);
+            };
+            a.readAsDataURL(blob);
+        }
+    })();
+</script>
+</html>

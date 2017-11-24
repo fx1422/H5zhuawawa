@@ -1,0 +1,322 @@
+@import "common.styl"
+@import "variable.styl"
+body {
+  background-color $room_backgroundColor
+  .content {
+    padding 0 0.5rem
+    header {
+      height $room_headerHeight
+      text-align center
+      span {
+        height 90%
+        width 80%
+        background url("../img/room/room_header.gif") center no-repeat
+        background-size contain
+        display inline-block
+      }
+    }
+    .video-box {
+      height 20rem
+      overflow hidden
+      background url('../img/room/wwj_bg.jpg') no-repeat 50%
+      background-size 100%
+      text-align center
+      margin 0 0 .25rem
+      border-radius .25rem
+      position relative
+      .onlineUser {
+        background: hsla(0, 0%, 100%, .9);
+        padding: .15rem;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 0 .25rem 0 .25rem
+        .onlineNum {
+          display: block;
+          float: left;
+          width: 3rem;
+          padding: 0 .15rem .3rem;
+          em {
+            color: #262626;
+            font-size: .7rem;
+            font-weight: 600;
+            display: block;
+            height: .9rem;
+          }
+          i {
+            color: #848484;
+            font-size: .6rem;
+            height: .5rem;
+            display: block;
+          }
+        }
+        .iconBox {
+          margin-top: .075rem;
+          display: inline-block;
+          img {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%
+            overflow: hidden;
+          }
+        }
+
+      }
+      .marquee {
+        height: 40px;
+        position: absolute;
+        left: 0;
+        top: 2.25rem;
+        overflow: hidden;
+        z-index: 100;
+        width 100%
+        marquee {
+          span {
+            display: inline-block;
+            margin: 0 .5rem;
+            height: 40px;
+            line-height: 40px;
+            color: #000;
+            font-size: .75rem;
+            text-shadow: #feff3b 1px 0;
+            font-weight: 700;
+            opacity: 1;
+            transition: all 20s;
+          }
+        }
+      }
+      .musicSwitch {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+        background: url('../img/room/music.png') no-repeat 50%;
+        background-size: 1.5rem;
+        border-radius: 100%;
+        position: absolute;
+        right: 1.25rem;
+        top: 6.25rem;
+      }
+      .playMusic {
+        -webkit-animation: spin 1s infinite linear;
+        animation: spin 1s infinite linear;
+      }
+    }
+    .handler-box {
+      .noPlay {
+        display flex
+        justify-content space-between
+        align-items center
+        margin 0.75rem
+        .left {
+          width 2.4rem
+          height 2.4rem
+          border-radius 50%
+          background url("../img/room/gift.png") no-repeat 50%
+          background-size 100%
+        }
+        .mid {
+          width 8.925rem
+          height 2.825rem
+          border-radius 2.5rem
+          background url('../img/room/btn_yes.png') no-repeat top
+          background-size 96%
+          position relative
+          span {
+            display block
+            text-align center
+            width 100%
+            position absolute
+            left 0
+          }
+          span.top {
+            font-size .75rem
+            color #2d2d2d
+            display block
+            top .4rem
+            height 1rem
+          }
+          span.bot {
+            top 1rem
+            i {
+              display inline-block
+              font-size .6rem
+              color #292929
+              padding-left 1rem
+              background url('../img/room/jinbi.png') no-repeat 0 0
+              background-size .9rem
+            }
+          }
+        }
+        .mid:active {
+          opacity 0.5
+        }
+        .right {
+          color #fff
+          font-size .6rem
+          text-align center
+          .recharge {
+            color #4b4b4b
+            height 1.25rem
+            text-align center
+            line-height .75rem
+            padding 0 .65rem 0 1.25rem
+            margin-top .25rem
+            border-radius 1.25rem
+            background #fff url('../img/room/jinbi.png') no-repeat .25rem
+            background-size .95rem
+            span {
+              display block
+              width 100%
+              height 1.25rem
+              line-height 1.25rem
+              background url('../img/room/add.png') no-repeat 100%
+              background-size .8rem
+              padding-right 1rem
+            }
+          }
+        }
+      }
+
+      .playing {
+        display flex
+        justify-content space-between
+        align-items center
+        margin 0.45rem
+        .left {
+          position relative
+          $boxH = 6.4rem
+          height $boxH
+          width $boxH
+          .btn {
+            $btnHeight = 2.4rem
+            height $btnHeight
+            width $btnHeight
+          }
+          .btn:nth-child(1) {
+            position absolute
+            left 0
+            right 0
+            margin auto
+            top 0
+            background url("../img/room/up.png") no-repeat 50%
+            background-size contain
+          }
+          .btn:nth-child(2) {
+            position absolute
+            right 0
+            top 0
+            bottom 0
+            margin auto
+            background url("../img/room/right.png") no-repeat 50%
+            background-size contain
+
+          }
+          .btn:nth-child(3) {
+            position absolute
+            right 0
+            left 0
+            bottom 0
+            margin auto
+            background url("../img/room/down.png") no-repeat 50%
+            background-size contain
+          }
+          .btn:nth-child(4) {
+            position absolute
+            left 0
+            top 0
+            bottom 0
+            margin auto
+            background url("../img/room/left.png") no-repeat 50%
+            background-size contain
+
+          }
+          .btn:active {
+            opacity 0.5
+          }
+        }
+        .right {
+          $rightH = 4rem
+          height $rightH
+          width $rightH
+          background url("../img/room/go.png") no-repeat 50%
+          background-size contain
+        }
+        .right:active {
+          opacity 0.5
+        }
+      }
+    }
+    .shows-box {
+      width 100%
+      background-color #ffffff
+      border-radius 6px
+      font-size: .7rem;
+      padding: .65rem .65rem 0;
+      margin: .65rem 0;
+      nav {
+        ul {
+          display flex
+          justify-content space-between
+          align-items center
+          box-sizing border-box
+          li {
+            padding 0.4rem 0.2rem
+            color #8c8c8c
+
+          }
+          li.active {
+            border-bottom 3px solid #ff72b0
+            color #000
+          }
+        }
+      }
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            .item {
+              padding 0.5rem 0
+              img {
+                width 100%
+              }
+            }
+            ul {
+              margin-top 0.5rem
+              li {
+                display flex
+                align-items center
+                justify-content space-between
+                border-bottom 1px solid #ddd
+                padding 0.5rem 0
+                color #9c9c9c
+                .left {
+                  display flex
+                  justify-content space-between
+                  align-items center
+                  color #000
+                  img {
+                    width 2rem
+                    height 2rem
+                    border-radius 100%
+                    margin-right 0.375rem
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@keyframes spin {
+  0%{
+    transform rote(0deg)
+  }
+  100%{
+    transform rotate(1turn)
+  }
+}
