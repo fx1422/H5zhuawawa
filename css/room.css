@@ -207,7 +207,7 @@ body .content .video-box {
   position: relative;
 }
 body .content .video-box .onlineUser {
-  background: rgba(255,255,255,0.9);
+  background: rgba(0,0,0,0.5);
   padding: 0.15rem;
   overflow: hidden;
   position: absolute;
@@ -222,27 +222,37 @@ body .content .video-box .onlineUser .onlineNum {
   padding: 0 0.15rem 0.3rem;
 }
 body .content .video-box .onlineUser .onlineNum em {
-  color: #262626;
+  color: #e4e4e4;
   font-size: 0.7rem;
   font-weight: 600;
   display: block;
   height: 0.9rem;
 }
 body .content .video-box .onlineUser .onlineNum i {
-  color: #848484;
+  color: #bababa;
   font-size: 0.6rem;
   height: 0.5rem;
   display: block;
 }
 body .content .video-box .onlineUser .iconBox {
   margin-top: 0.075rem;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 body .content .video-box .onlineUser .iconBox img {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 100%;
   overflow: hidden;
+  margin: 0 0.2rem;
+}
+body .content .video-box .onlineUser .iconBox .watcherMore {
+  height: 0.3rem;
+  width: 0.3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 0.1rem;
 }
 body .content .video-box .marquee {
   height: 40px;

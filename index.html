@@ -22,17 +22,17 @@
     <!--Activity-->
     <div class="act-box">
         <ul>
-            <li>
+            <li onclick="goInvite()">
                 <p>邀请有奖</p>
                 <span>邀请送好礼</span>
             </li>
             <li class="line"></li>
-            <li>
+            <li onclick="goSign()">
                 <p>签到开宝箱</p>
                 <span>签到送大礼</span>
             </li>
             <li class="line"></li>
-            <li>
+            <li onclick="goTask()">
                 <p>任务奖励</p>
                 <span>So Easy</span>
             </li>
@@ -85,7 +85,15 @@
         $(".room-list ul").on('click', 'li', function () {
             const roomId = $(this).attr('data-value');
             location.href = 'http://ddwwj.youxideng.cn/h5/gamedetail.html?room=' + roomId
+        });
+        //邀请好友
+        $('.invite').on('click',function () {
+            location.href = 'invitePage.html'
         })
+
+
+
+
     });
 
     /**
@@ -142,6 +150,19 @@
                 })
             })
         }
+    }
+
+    /**
+     * 邀请page
+     */
+    function goInvite() {
+        location.href = 'invitePage.html'
+    }
+    function goSign() {
+        location.href = 'signPage.html'
+    }
+    function goTask() {
+        location.href = 'taskPage.html'
     }
 
 

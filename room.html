@@ -28,10 +28,9 @@
                 <img src="img/room/icon.jpg" alt="">
                 <img src="img/room/icon.jpg" alt="">
                 <img src="img/room/icon.jpg" alt="">
-                <img src="img/room/icon.jpg" alt="">
-                <img src="img/room/icon.jpg" alt="">
-                <img src="img/room/icon.jpg" alt="">
-                <img src="img/room/icon.jpg" alt="">
+                 <span class="watcherMore"></span>
+                <span class="watcherMore"></span>
+                <span class="watcherMore"></span>
             </span>
         </div>
         <div class="marquee">
@@ -169,10 +168,10 @@
 <script src="libs/jquery/jquery2.1.3.min.js"></script>
 <script src="libs/jquery.swiper.min/swiper-3.4.2.jquery.min.js"></script>
 <script src="libs/fastclick/fastclick.js"></script>
+<script src="js/common.js"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-
         (function audioAutoPlay() {
             const audio = document.getElementById('bgMusic');
             audio.play();
@@ -193,10 +192,8 @@
         });
         /*点击菜单切换*/
         $('.navHeader ul li').click(function () {
-
             $('.navHeader ul li').removeClass('active');
             $(this).addClass('active');
-
             const show_id = $(this).data('num');
             swiper.slideTo(show_id, 500, false);
         });
@@ -282,30 +279,16 @@
                 console.log(evt);
                 blobToDataURL(evt.data, function (res) {
                     output.attr('src', res);
-                    setTimeout(()=>{
+                   /* setTimeout(() => {
                         websocket.send('A0002')
-                    },20)
+                    }, 20)*/
                 })
             };
             websocket.onerror = function (evt) {
                 console.log(evt)
             };
         }
-
         window.addEventListener("load", init, false);
-
-        /**
-         * blob转base64
-         * @param blob
-         * @param callback
-         */
-        function blobToDataURL(blob, callback) {
-            const a = new FileReader();
-            a.onload = function (e) {
-                callback(e.target.result);
-            };
-            a.readAsDataURL(blob);
-        }
     })();
 </script>
 </html>
