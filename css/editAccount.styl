@@ -1,0 +1,216 @@
+@import "variable.styl"
+@import "common.styl"
+body {
+  background $background-color
+  height 100vh
+}
+
+.content {
+  header {
+    height 2.8rem
+    width 100%
+    text-align center;
+    padding 0 1rem
+    position relative
+    em {
+      height: 1.1rem;
+      width: 1.1rem;
+      background: url(../img/sign/goback.png) no-repeat 50%;
+      background-size: contain;
+      position absolute
+      left 1rem
+      top 0
+      bottom 0
+      margin auto
+    }
+    span {
+      height: 100%;
+      line-height: 2.8rem;
+      font-size: .8rem;
+      color: #fff;
+    }
+  }
+  .lists {
+    background #fff
+    ul {
+      li {
+        border-bottom: .5px solid #d6d6d6;
+        height: 2.7rem;
+        overflow: hidden;
+        position: relative;
+        font-size: .7rem;
+        color: #373737;
+        display flex
+        align-items center
+        justify-content space-between
+        padding 0 1rem
+      }
+      span:nth-child(2) {
+        color #f34b50
+        margin-right 1rem
+      }
+      i {
+        width: .55rem;
+        height: .55rem;
+        display: block;
+        border-top: 1px solid #cbcbcb;
+        border-right: 1px solid #cbcbcb;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg)
+        position absolute
+        right 1rem
+        top 0
+        bottom 0
+        margin auto
+      }
+    }
+  }
+  .loginOut {
+    width: 86%;
+    height: 2.25rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    text-align: center;
+    background: #fff238;
+    border-radius: .2rem;
+    border: .025rem solid #fedd44;
+    font-size: .8rem;
+    color: #000;
+    justify-content center
+    display flex
+    align-items center
+    i {
+      height 0.8rem
+      width 0.8rem
+      background url("../img/account/off.png") 50% no-repeat
+      background-size contain
+      margin-right 0.4rem
+    }
+  }
+  .loginOut:active {
+    opacity 0.5
+  }
+  .editUserName {
+    position absolute
+    z-index 150
+    height 9rem
+    width 80%
+    left 0
+    right 0
+    top 3rem
+    margin auto
+    background-color #ffffff
+    border-radius 6px
+    text-align center
+    display none
+    .title {
+      height 2.8rem
+      line-height 2.8rem
+      font-size 0.88rem
+      text-align center
+      border-bottom 1px solid #e2e2e2
+      margin 0 0.6rem
+    }
+    input {
+      border 1px solid #b4b4b4
+      width 90%
+      height 2rem
+      margin-top 1rem
+      border-radius 6px
+      text-indent 1rem
+    }
+    .box{
+      display flex
+      align-items center
+      justify-content space-around
+      margin-top 1rem
+      font-size 0.74rem
+      .item{
+        height 1.6rem
+        width 5.8rem
+        color white
+        line-height 1.6rem
+        background-color #bdbdbd
+        border-radius 6px
+      }
+      .item:active{
+        opacity 0.5
+      }
+      .ok{
+        background-color #ff0000
+      }
+    }
+  }
+  .editPassWord{
+    position absolute
+    z-index 150
+    width 80%
+    left 0
+    right 0
+    top 3rem
+    margin auto
+    background-color #ffffff
+    border-radius 6px
+    text-align center
+    padding-bottom 1rem
+    display none
+    .title {
+      height 2.8rem
+      line-height 2.8rem
+      font-size 0.88rem
+      text-align center
+      border-bottom 1px solid #e2e2e2
+      margin 0 0.6rem
+    }
+    .list{
+      display flex
+      align-items center
+      justify-content space-between
+      padding  0.6rem 1rem
+      .txt{
+        font-size 0.7rem
+      }
+      input {
+        border 1px solid #b4b4b4
+        width 60%
+        height 1.6rem
+        border-radius 6px
+        text-indent 1rem
+        font-size 0.8rem
+      }
+    }
+    .box{
+      display flex
+      align-items center
+      justify-content space-around
+      margin-top 1rem
+      font-size 0.74rem
+      .item{
+        height 1.6rem
+        width 5.8rem
+        color white
+        line-height 1.6rem
+        background-color #bdbdbd
+        border-radius 6px
+      }
+      .item:active{
+        opacity 0.5
+      }
+      .ok{
+        background-color #ff0000
+      }
+    }
+  }
+}
+
+.backDrop {
+  height 100vh
+  width 100%
+  background-color #000000
+  opacity 0.6
+  position absolute
+  top 0
+  z-index 100
+  display none
+
+}

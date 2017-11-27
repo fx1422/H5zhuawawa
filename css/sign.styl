@@ -1,0 +1,289 @@
+@import "variable.styl"
+@import "common.styl"
+.content {
+  background #29004b
+  header {
+    height 8vh
+    background-color #29004b !important
+    position relative
+    text-align center
+    em {
+      position absolute
+      height 1.1rem
+      width 1.1rem
+      left 0
+      top 0
+      bottom 0
+      margin auto
+      background url("../img/sign/goback.png") no-repeat 50%
+      background-size contain
+      margin-left 1rem
+    }
+    span {
+      line-height 8vh
+      font-size .9rem
+      text-align center
+      display block
+      color #fff
+      overflow hidden
+    }
+  }
+  .sign {
+    overflow hidden
+    width 100%
+    background url(../img/sign/sign-top.png) no-repeat top
+    background-size 100%
+    .treasure-chest  {
+      height 11.35rem
+      overflow hidden
+      position relative
+      .f-ltxt, .f-rtxt {
+        height 1.5rem
+        line-height 1.5rem
+        font-size .7rem
+        color #fff
+        background rgba(198, 63, 255, .3)
+        position absolute
+        top 1.45rem
+        display block
+        padding 0 .5rem
+      }
+      .f-ltxt {
+        left 0
+        border-radius 0 1.25rem 1.25rem 0
+      }
+      .f-rtxt {
+        right 0
+        border-radius 1.25rem 0 0 1.25rem
+      }
+      .signbx {
+        margin 5rem auto 0
+        width 17.85rem
+        height 4.55rem
+        background url(../img/sign/sign_title_icon.png) no-repeat top
+        background-size 17.85rem
+        position relative
+        .btn-icon {
+          position absolute
+          left 2.5rem
+          bottom 1.25rem
+          display block
+          i.notopen {
+            width 5.025rem
+            height 4.2rem
+            display block
+            background url(../img/sign/sign_close_icon.png) no-repeat 50%
+            background-size 5.025rem
+          }
+          i.open {
+            width 5.025rem
+            height 4.2rem
+            display block
+            background url(../img/sign/sign_box_icon.png) no-repeat 50%
+            background-size 5.025rem
+          }
+          .timeCut{
+           animation shake 1s linear infinite alternate
+          }
+        }
+        .info {
+          padding-left 46%
+          height 3.425rem
+          overflow hidden
+          strong {
+            font-size .85rem
+            color #fff
+            display block
+            height 1rem
+            margin .55rem 0 .3rem
+          }
+          span.time, span.timeout {
+            font-size .75rem
+            color #fff
+            display block
+            height .8rem
+          }
+          span.time {
+            padding-left 1rem
+            line-height .9rem
+            background url(../img/sign/sign_tiem_icon.png) no-repeat 0
+            background-size .8rem
+          }
+
+        }
+        .tex {
+          width 100%
+          height 1.25rem
+          line-height 1.25rem
+          text-align center
+          font-size .6rem
+          color #f8dd00
+          display block
+        }
+      }
+    }
+
+    .week-sign {
+      width 18rem
+      background #6c006f
+      padding .25rem
+      margin 1.25rem auto 0
+      border-radius .75rem
+      position relative
+      .tl-big {
+        width 10rem
+        height 2.175rem
+        display block
+        background url(../img/sign/sign_titles_icon.png) no-repeat 50%
+        background-size 10rem
+        position absolute
+        left 50%
+        top -8%
+        margin-left -5rem
+      }
+      .info {
+        background #9e28cc
+        padding 1.5rem 0 .5rem
+        width 100%
+        border-radius .75rem
+        .sign-list {
+          overflow hidden
+          ul {
+            li {
+              width 4.25rem
+              height 6rem
+              float left
+              background url(../img/sign/sign_day_icon.png) no-repeat 50%
+              background-size 4.425rem
+              margin 0 0 .25rem
+              position relative
+              em, i {
+                width 100%
+                font-size .6rem
+                color #fff
+                display block
+                text-align center
+              }
+              em {
+                height 1rem
+                line-height 1.1rem
+                margin-top .5rem
+              }
+              i {
+                height 1.05rem
+                line-height 1.05rem
+                position absolute
+                left 0
+                bottom .725rem
+              }
+            }
+            li.se {
+              margin-left .2rem
+            }
+          }
+        }
+        .tip {
+          display block
+          width 100%
+          text-align center
+          color #fff
+          font-size .8rem
+          i {
+            color #ffdd02
+          }
+        }
+      }
+    }
+    .continuous-sign {
+      margin-top: .75rem;
+      padding: .5rem;
+      ul {
+        li {
+          margin-bottom: 1rem;
+          position: relative;
+          padding: .375rem;
+          border: .5px solid #d5a2ff;
+          border-radius: .25rem;
+          z-index: 1;
+          strong {
+            width: 7.5rem;
+            height: 1.75rem;
+            text-align: center;
+            font-size: .8rem;
+            display: block;
+            font-weight: 700;
+            position: absolute;
+            left: 50%;
+            top: -8%;
+            margin-left: -3.75rem;
+            color: #a22600;
+            background: url(../img/sign/usersign_list_tl.png) no-repeat top;
+            background-size: 7.5rem;
+            i{
+              font-size 1rem
+            }
+          }
+          .info{
+            background: -webkit-gradient(linear,0 0,0 bottom,from(#bc00e1),to(#8600bf));
+            border-radius: .25rem;
+            width: 16.95rem;
+            height: 3.75rem;
+            overflow: hidden;
+            .icon{
+              width: 1.425rem;
+              height: 1.8rem;
+              display: block;
+              float: left;
+              background: url(../img/sign/sign_num_icon.png) no-repeat 50%;
+              background-size: 1.425rem;
+              font-size: .6rem;
+              color: #f66d39;
+              text-align: center;
+              line-height: 1.5rem;
+              margin: 1.25rem .75rem 0 1rem;
+            }
+            .text{
+              display: block;
+              float: left;
+              height: 2.125rem;
+              line-height: 1.625rem;
+              font-size: .75rem;
+              color: #fff;
+              margin: 1.35rem 0 0;
+              i{
+                font-size: 1.15rem;
+              }
+            }
+            .btn{
+              float: right;
+              display: block;
+              border-radius: .25rem;
+              height: 1.5rem;
+              width: 4rem;
+              outline: none;
+              border: 0;
+              background: #8e8e8e;
+              color: #ebebeb;
+              font-size: .7rem;
+              font-weight: 400;
+              margin: 1.5rem 1rem 0 0;
+            }
+            .noget{
+              background: #FC7C12;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  @keyframes shake{
+    0%{
+      transform scale3d(1,1,1) rotate(0)
+
+    }
+    100%{
+      transform scale(1.2) rotate(10deg)
+    }
+
+  }

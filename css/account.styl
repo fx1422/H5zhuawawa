@@ -1,0 +1,122 @@
+@import "variable.styl"
+@import "common.styl"
+body {
+  background $background-color
+  height 100vh
+}
+
+.content {
+  header {
+    height 9rem
+    .item-1 {
+      display flex
+      justify-content space-between
+      align-items center
+      height 8vh
+      padding 0 1rem
+      em {
+        height: 1.1rem;
+        width: 1.1rem;
+        background: url(../img/sign/goback.png) no-repeat 50%;
+        background-size: contain;
+      }
+      span {
+        height: 2.45rem;
+        line-height: 2.45rem;
+        font-size: .7rem;
+        color: #fff;
+      }
+    }
+    .item-2 {
+      display flex
+      justify-content space-around
+      align-items center
+      .account-box {
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        img {
+          height 3rem
+          width 3rem
+        }
+        span {
+          text-align: center;
+          color: #fff;
+          padding: .25rem;
+        }
+      }
+      .sign {
+        width: 7.25rem;
+        height: 2rem;
+        line-height: 2rem;
+        border-radius: 1.25rem;
+        background: #fff238;
+        text-align center
+        font-size 0.8rem
+        box-shadow: 0.15rem 0.2rem 0.2rem #f15198, -0.15rem 0 0.2rem #f15198;
+      }
+      .sign:active {
+        opacity 0.5
+      }
+    }
+  }
+  .lists {
+    margin: .5rem 0;
+    background: #fff;
+    ul {
+      li {
+        padding: 1rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: .7rem;
+        border-bottom: .025rem solid #e5e5e8;
+        position relative
+        span:nth-child(2) {
+          color: #ff7ab5;
+          margin-right 1rem
+        }
+        em {
+          position absolute
+          right 1rem
+          height 0.6rem
+          width 0.6rem
+          background url("../img/account/go.png")50% no-repeat
+          background-size contain
+        }
+      }
+      li:active{
+        opacity 0.5
+      }
+
+    }
+  }
+  .loginOut{
+    width: 86%;
+    height: 2.25rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+    text-align: center;
+    background: #fff238;
+    border-radius: .2rem;
+    border: .025rem solid #fedd44;
+    font-size: .8rem;
+    color: #000;
+    justify-content center
+    display flex
+    align-items center
+    i{
+      height 0.8rem
+      width 0.8rem
+      background url("../img/account/off.png")50% no-repeat
+      background-size contain
+      margin-right 0.4rem
+    }
+  }
+  .loginOut:active{
+    opacity 0.5
+  }
+}

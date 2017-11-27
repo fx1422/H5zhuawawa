@@ -7,4 +7,8 @@ window.addEventListener(('orientationchange' in window ? 'orientationchange' : '
     c();
     return c;
 })(), false);
+
+$(function () {
+    FastClick.attach(document.body);
+});
     

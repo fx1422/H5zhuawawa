@@ -1,0 +1,107 @@
+@import "variable.styl"
+@import "common.styl"
+body {
+  background $background-color
+  height 100vh
+}
+
+.content {
+  header {
+    height 8vh
+    display flex
+    padding 0 1rem
+    position relative
+    align-items center
+    justify-content center
+    em {
+      height: 1.1rem;
+      width: 1.1rem;
+      background: url(../img/sign/goback.png) no-repeat 50%;
+      background-size: contain;
+      position absolute
+      top 0
+      bottom 0
+      margin auto
+      left 1rem
+    }
+    span {
+      height: 2.45rem;
+      line-height: 2.45rem;
+      font-size: .7rem;
+      color: #fff;
+    }
+    span:nth-child(2) {
+      font-size 0.9rem
+    }
+  }
+  .box {
+    width 90%
+    background-color #ffffff
+    margin auto
+    border-radius 6px
+    ul {
+      li {
+        display flex
+        align-items center
+        justify-content space-between
+        padding 0.6rem
+        border-bottom: 1px solid #e5e5e5;
+        width 90%
+        margin auto
+        .left{
+          display flex
+          img{
+            height 2.55rem
+            width 2.55rem
+          }
+          .msg{
+            display flex
+            flex-direction column
+            align-items flex-start
+            font-size: .9rem;
+            color: #191919;
+            margin-left 0.2rem
+            span{
+              line-height 1.5rem
+              height 1.5rem
+            }
+            span:nth-child(2){
+              font-size: .65rem;
+              color: #979797;
+            }
+          }
+        }
+
+        .right{
+          font-size: .7rem;
+          color: #ff6eae;
+        }
+      }
+    }
+  }
+  .noCatch{
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    margin auto
+    width 100%
+    height 5rem
+    text-align center
+    display none
+    i{
+      height 4rem
+      width 4rem
+      background url("../img/index/null.png")50% no-repeat
+      background-size contain
+      display inline-block
+    }
+    span{
+      color #ffffff
+      font-size 0.74rem
+      display block
+    }
+  }
+
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人资料修改</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/editAccount.css">
+</head>
+<body>
+<div class="content">
+    <header>
+        <em onclick="back()"></em><span>个人资料修改</span>
+    </header>
+    <div class="lists">
+        <ul>
+            <li>
+                <span>用户名</span><span class="username">15275852258</span><i></i>
+            </li>
+            <li>
+                <span>密码</span><span class="editPwd">点击修改</span><i></i>
+            </li>
+        </ul>
+    </div>
+    <div class="loginOut"><i></i><span>退出登录</span></div>
+    <div class="editUserName">
+        <div class="title">修改用户名</div>
+        <input class="editInput" type="text">
+        <div class="box">
+            <div class="item cancel">再想想</div>
+            <div class="item ok subEdit">确认修改</div>
+        </div>
+    </div>
+    <div class="editPassWord">
+        <div class="title">修改密码</div>
+        <div class="list"><span class="txt">当前密码</span><input class="pwd" type="password"></div>
+        <div class="list"><span class="txt">新密码</span><input class="newPwd" type="password"></div>
+        <div class="list"><span class="txt">确认新密码</span><input class="againNewPwd" type="password"></div>
+        <div class="box">
+            <div class="item pwd_cancel">再想想</div>
+            <div class="item ok pwd_subEdit">确认修改</div>
+        </div>
+    </div>
+</div>
+<div class="backDrop"></div>
+</body>
+<script src="libs/jquery/jquery2.1.3.min.js"></script>
+<script src="libs/rem/rem.js"></script>
+<script src="libs/fastclick/fastclick.js"></script>
+<script>
+    let username;
+    /*密码修改*/
+    const pwdController = {
+        inputVal: [],
+        errorMsg: ['当前密码不能为空', '请输入新密码', '请输入确认密码'],
+        _init() {
+            /*修改密码*/
+            $(".editPwd").on('click', function () {
+                $(".editPassWord,.backDrop").fadeIn();
+
+            });
+            /*取消修改*/
+            $(".pwd_cancel").on('click', function () {
+                $(".editPassWord,.backDrop").fadeOut();
+            });
+            /*提交修改*/
+            $(".pwd_subEdit").on('click', function () {
+                pwdController.submitEditPwd()
+            });
+        },
+        submitEditPwd() {
+            pwdController.inputVal[0] = $('.pwd').val().trim();
+            pwdController.inputVal[1] = $('.newPwd').val().trim();
+            pwdController.inputVal[2] = $('.againNewPwd').val().trim();
+            pwdController.checkInputPwd({val: pwdController.inputVal});
+        },
+        checkInputPwd(data) {
+            for (let i = 0; i < data.val.length; i++) {
+                if (data.val[i] === '' || data.val[i] === null) {
+                    alert(pwdController.errorMsg[i]);
+                    return
+                } else if (data.val[1] !== data.val[2]) {
+                    alert('两次新密码不一致');
+                    return
+                }
+                else {
+                    pwdController.postNewPwd()
+                }
+            }
+        },
+        postNewPwd() {
+            $.ajax({
+                url: "",
+                type: 'POST',
+                data: pwdController.inputVal,
+                success: function (data) {
+                    console.log(data)
+                }
+            })
+        },
+
+    };
+    pwdController._init();
+
+    const uNameController = {
+        username: '',
+        _init() {
+            uNameController.username = $(".username").text().trim();
+            $(".editInput")
+                .val(uNameController.username)
+                .on('input propertychange', function () {
+                    if (!uNameController.checkInput()) {
+                        $(".subEdit").removeClass('ok')
+                    } else {
+                        $(".subEdit").addClass('ok');
+                        uNameController.username = $(this).val().trim();
+                    }
+                });
+            /*修改用户名*/
+            $(".username").on('click', function () {
+                $(".editUserName,.backDrop").fadeIn();
+            });
+            /*取消修改*/
+            $(".cancel").on('click', function () {
+                $(".editUserName,.backDrop").fadeOut();
+            });
+            /*提交修改*/
+            $(".subEdit").on('click', function () {
+                if (uNameController.username == null || uNameController.username == "") {
+                    alert('用户名不能为空')
+                } else {
+                    uNameController.submitEditName()
+                }
+            });
+        },
+        checkInput() {
+            const val = $(".editInput").val().trim();
+            return val !== null || val !== '';
+
+        },
+        submitEditName() {
+            $(".username").text(uNameController.username);
+            $(".editUserName,.backDrop").fadeOut();
+        }
+    };
+    uNameController._init();
+
+    function back() {
+        window.history.back()
+    }
+
+
+</script>
+</html>

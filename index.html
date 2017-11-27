@@ -13,8 +13,9 @@
 <div class="content">
     <!--header-->
     <header>
-        <div class="user-msg"><img src="img/index/icon.png" alt=""><span class="username">15275277359</span></div>
-        <div class="acc-box"><img src="img/index/jinbi.png" alt="">
+        <div class="user-msg" onclick="goAccount()"><img src="img/index/icon.png" alt=""><span class="username">15275277359</span>
+        </div>
+        <div class="acc-box" onclick="goRecharge()"><img src="img/index/jinbi.png" alt="">
             <span class="balance">55</span>
             <img src="img/index/jiahao.png" alt="">
         </div>
@@ -58,18 +59,17 @@
 
 </div>
 </body>
+<script src="libs/jquery/jquery2.1.3.min.js"></script>
 <script src="libs/rem/rem.js"></script>
 <script src="libs/iscroll/iscroll.js"></script>
-<script src="libs/jquery/jquery2.1.3.min.js"></script>
 <script src="libs/fastclick/fastclick.js"></script>
 <script>
     let myScroll;
-    let roomList;
 
     function loaded() {
         setTimeout(() => {
             myScroll = new IScroll('#wrapper', {
-                click: true
+                click: false
             });
         }, 20)
     }
@@ -79,7 +79,6 @@
     }, false);
 
     $(function () {
-        FastClick.attach(document.body);
         $(".room-list ul li").remove();
         renderRoomList();
         $(".room-list ul").on('click', 'li', function () {
@@ -87,11 +86,9 @@
             location.href = 'http://ddwwj.youxideng.cn/h5/gamedetail.html?room=' + roomId
         });
         //邀请好友
-        $('.invite').on('click',function () {
+        $('.invite').on('click', function () {
             location.href = 'invitePage.html'
         })
-
-
 
 
     });
@@ -122,7 +119,7 @@
             $(".room-list ul").append(roomList);
             setTimeout(() => {
                 myScroll.refresh();
-            }, 20)
+            }, 50)
         }, error => {
             console.log(error)
         })
@@ -150,7 +147,7 @@
                 })
             })
         }
-    }
+    };
 
     /**
      * 邀请page
@@ -158,13 +155,22 @@
     function goInvite() {
         location.href = 'invitePage.html'
     }
+
     function goSign() {
         location.href = 'signPage.html'
     }
+
     function goTask() {
         location.href = 'taskPage.html'
     }
 
+    function goAccount() {
+        location.href = 'account.html'
+    }
+
+    function goRecharge() {
+        location.href = 'recharge.html'
+    }
 
 </script>
 

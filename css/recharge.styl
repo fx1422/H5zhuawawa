@@ -1,0 +1,126 @@
+@import "variable.styl"
+@import "common.styl"
+body {
+  background $background-color
+  height 100vh
+}
+
+.content {
+  header {
+    height 8vh
+    background-color #FF7AB5
+    display flex
+    padding 0 1rem
+    position relative
+    align-items center
+    justify-content space-between
+    em {
+      height: 1.1rem;
+      width: 1.1rem;
+      background: url(../img/sign/goback.png) no-repeat 50%;
+      background-size: contain;
+    }
+    span {
+      height: 2.45rem;
+      line-height: 2.45rem;
+      font-size: .7rem;
+      color: #fff;
+    }
+    span:nth-child(2) {
+      font-size 0.9rem
+    }
+  }
+  .banner {
+    height 7rem
+    img {
+      height 100%
+      width 100%
+    }
+  }
+  .box {
+    background-color #ffffff
+    margin 0.5rem auto
+    width 90%
+    box-sizing border-box
+    padding 0.6rem
+    border-radius 6px
+    ul{
+      display flex
+      flex-wrap wrap
+      justify-content space-around
+      li{
+        display flex
+        flex-direction column
+        align-items center
+        width 45%
+        border: 1px solid #f6a;
+        font-size 0.6rem
+        color #f2007e
+        border-radius 6px
+        padding 0.6rem
+        margin 0.3rem 0
+        span{
+          height 1.1rem
+          line-height 1.1rem
+          em{
+            font-size: 1rem;
+            font-weight: 700;
+          }
+        }
+        .shower{
+          font-weight: 700;
+          font-size: .75rem;
+          -webkit-animation: shake .3s ease infinite;
+        }
+        span:nth-child(3){
+          width: 90%;
+          height: .95rem;
+          margin-top: .25rem;
+          line-height: .95rem;
+          text-align: center;
+          color: #fff;
+          background: #f6a;
+          outline: none;
+          border: none;
+          border-radius: .1rem;
+        }
+      }
+      li.active{
+        background-color #b9bbff
+        border none
+        span{
+          color #ffffff
+        }
+      }
+    }
+  }
+  .submit{
+    height 2rem
+    width 80%
+    margin auto
+    font-size 0.8rem
+    color white
+    background-color #F22842
+    text-align center
+    border-radius 6px
+    line-height 2rem
+    margin-top 1rem
+  }
+  .submit:active{
+    opacity 0.5
+  }
+}
+  @keyframes shake{
+    0% {
+      color: #f99521;
+      text-shadow: 0 0 15px;
+    }
+    50% {
+        color: #a604f9;
+        text-shadow: 0 0 15px;
+    }
+    100% {
+        color: #e93628;
+        text-shadow: 0 0 15px;
+    }
+  }

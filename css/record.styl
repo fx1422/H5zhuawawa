@@ -1,0 +1,76 @@
+@import "variable.styl"
+@import "common.styl"
+body{
+  background $background-color
+  height 100vh
+}
+.content{
+  header {
+    height 8vh
+    display flex
+    padding 0 1rem
+    position relative
+    align-items center
+    justify-content center
+    em {
+      height: 1.1rem;
+      width: 1.1rem;
+      background: url(../img/sign/goback.png) no-repeat 50%;
+      background-size: contain;
+      position absolute
+      top 0
+      bottom 0
+      margin auto
+      left 1rem
+    }
+    span {
+      height: 2.45rem;
+      line-height: 2.45rem;
+      font-size: .7rem;
+      color: #fff;
+    }
+    span:nth-child(2) {
+      font-size 0.9rem
+    }
+  }
+  .box{
+    width 90%
+    margin auto
+    background-color #ffffff
+    border-radius 6px
+    padding 0.8rem
+    ul{
+      li{
+        border-bottom 1px solid #f2f2f2
+        display flex
+        justify-content space-between
+        align-items center
+        margin-top 1rem
+        .left{
+          display flex
+          flex-direction column
+          align-items flex-start
+          span{
+            line-height 1.4rem
+            height 1.4rem
+
+          }
+          span:nth-child(1){
+            font-size 0.8rem
+            color #343434
+          }
+          span:nth-child(2){
+            font-size 0.76rem
+            color #dbdbdb
+
+          }
+        }
+        .right{
+          color: #ff137b;
+          font-size: .75rem;
+        }
+      }
+    }
+    
+  }
+}

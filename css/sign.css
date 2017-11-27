@@ -1,0 +1,487 @@
+* {
+  box-sizing: border-box;
+}
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+html {
+  font-size: 100%;
+  font-size: 1em;
+  line-height: 1.5;
+  font-family: Heiti SC, Helvetica, HelveticaNeue, Droidsansfallback, Droid Sans, Microsoft YaHei;
+  color: #000;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
+  zoom: 1;
+  touch-action: none;
+}
+html,
+img {
+  padding: 0;
+  margin: 0;
+}
+img {
+  border: 0;
+  vertical-align: top;
+}
+input[type=password],
+input[type=text],
+textarea {
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  resize: none;
+  outline: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+table {
+  border-collapse: collapse;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 400;
+}
+li,
+ul {
+  list-style: none;
+}
+dfn,
+em,
+i {
+  font-style: normal;
+}
+a,
+button,
+img,
+input,
+span,
+textarea {
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+  outline: none;
+}
+a,
+button,
+input {
+  -webkit-tap-highlight-color: rgba(255,0,0,0);
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.content {
+  background: #29004b;
+}
+.content header {
+  height: 8vh;
+  background-color: #29004b !important;
+  position: relative;
+  text-align: center;
+}
+.content header em {
+  position: absolute;
+  height: 1.1rem;
+  width: 1.1rem;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url("../img/sign/goback.png") no-repeat 50%;
+  background-size: contain;
+  margin-left: 1rem;
+}
+.content header span {
+  line-height: 8vh;
+  font-size: 0.9rem;
+  text-align: center;
+  display: block;
+  color: #fff;
+  overflow: hidden;
+}
+.content .sign {
+  overflow: hidden;
+  width: 100%;
+  background: url("../img/sign/sign-top.png") no-repeat top;
+  background-size: 100%;
+}
+.content .sign .treasure-chest {
+  height: 11.35rem;
+  overflow: hidden;
+  position: relative;
+}
+.content .sign .treasure-chest .f-ltxt,
+.content .sign .treasure-chest .f-rtxt {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 0.7rem;
+  color: #fff;
+  background: rgba(198,63,255,0.3);
+  position: absolute;
+  top: 1.45rem;
+  display: block;
+  padding: 0 0.5rem;
+}
+.content .sign .treasure-chest .f-ltxt {
+  left: 0;
+  border-radius: 0 1.25rem 1.25rem 0;
+}
+.content .sign .treasure-chest .f-rtxt {
+  right: 0;
+  border-radius: 1.25rem 0 0 1.25rem;
+}
+.content .sign .treasure-chest .signbx {
+  margin: 5rem auto 0;
+  width: 17.85rem;
+  height: 4.55rem;
+  background: url("../img/sign/sign_title_icon.png") no-repeat top;
+  background-size: 17.85rem;
+  position: relative;
+}
+.content .sign .treasure-chest .signbx .btn-icon {
+  position: absolute;
+  left: 2.5rem;
+  bottom: 1.25rem;
+  display: block;
+}
+.content .sign .treasure-chest .signbx .btn-icon i.notopen {
+  width: 5.025rem;
+  height: 4.2rem;
+  display: block;
+  background: url("../img/sign/sign_close_icon.png") no-repeat 50%;
+  background-size: 5.025rem;
+}
+.content .sign .treasure-chest .signbx .btn-icon i.open {
+  width: 5.025rem;
+  height: 4.2rem;
+  display: block;
+  background: url("../img/sign/sign_box_icon.png") no-repeat 50%;
+  background-size: 5.025rem;
+}
+.content .sign .treasure-chest .signbx .btn-icon .timeCut {
+  animation: shake 1s linear infinite alternate;
+}
+.content .sign .treasure-chest .signbx .info {
+  padding-left: 46%;
+  height: 3.425rem;
+  overflow: hidden;
+}
+.content .sign .treasure-chest .signbx .info strong {
+  font-size: 0.85rem;
+  color: #fff;
+  display: block;
+  height: 1rem;
+  margin: 0.55rem 0 0.3rem;
+}
+.content .sign .treasure-chest .signbx .info span.time,
+.content .sign .treasure-chest .signbx .info span.timeout {
+  font-size: 0.75rem;
+  color: #fff;
+  display: block;
+  height: 0.8rem;
+}
+.content .sign .treasure-chest .signbx .info span.time {
+  padding-left: 1rem;
+  line-height: 0.9rem;
+  background: url("../img/sign/sign_tiem_icon.png") no-repeat 0;
+  background-size: 0.8rem;
+}
+.content .sign .treasure-chest .signbx .tex {
+  width: 100%;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  font-size: 0.6rem;
+  color: #f8dd00;
+  display: block;
+}
+.content .sign .week-sign {
+  width: 18rem;
+  background: #6c006f;
+  padding: 0.25rem;
+  margin: 1.25rem auto 0;
+  border-radius: 0.75rem;
+  position: relative;
+}
+.content .sign .week-sign .tl-big {
+  width: 10rem;
+  height: 2.175rem;
+  display: block;
+  background: url("../img/sign/sign_titles_icon.png") no-repeat 50%;
+  background-size: 10rem;
+  position: absolute;
+  left: 50%;
+  top: -8%;
+  margin-left: -5rem;
+}
+.content .sign .week-sign .info {
+  background: #9e28cc;
+  padding: 1.5rem 0 0.5rem;
+  width: 100%;
+  border-radius: 0.75rem;
+}
+.content .sign .week-sign .info .sign-list {
+  overflow: hidden;
+}
+.content .sign .week-sign .info .sign-list ul li {
+  width: 4.25rem;
+  height: 6rem;
+  float: left;
+  background: url("../img/sign/sign_day_icon.png") no-repeat 50%;
+  background-size: 4.425rem;
+  margin: 0 0 0.25rem;
+  position: relative;
+}
+.content .sign .week-sign .info .sign-list ul li em,
+.content .sign .week-sign .info .sign-list ul li i {
+  width: 100%;
+  font-size: 0.6rem;
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+.content .sign .week-sign .info .sign-list ul li em {
+  height: 1rem;
+  line-height: 1.1rem;
+  margin-top: 0.5rem;
+}
+.content .sign .week-sign .info .sign-list ul li i {
+  height: 1.05rem;
+  line-height: 1.05rem;
+  position: absolute;
+  left: 0;
+  bottom: 0.725rem;
+}
+.content .sign .week-sign .info .sign-list ul li.se {
+  margin-left: 0.2rem;
+}
+.content .sign .week-sign .info .tip {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.content .sign .week-sign .info .tip i {
+  color: #ffdd02;
+}
+.content .sign .continuous-sign {
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+}
+.content .sign .continuous-sign ul li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding: 0.375rem;
+  border: 0.5px solid #d5a2ff;
+  border-radius: 0.25rem;
+  z-index: 1;
+}
+.content .sign .continuous-sign ul li strong {
+  width: 7.5rem;
+  height: 1.75rem;
+  text-align: center;
+  font-size: 0.8rem;
+  display: block;
+  font-weight: 700;
+  position: absolute;
+  left: 50%;
+  top: -8%;
+  margin-left: -3.75rem;
+  color: #a22600;
+  background: url("../img/sign/usersign_list_tl.png") no-repeat top;
+  background-size: 7.5rem;
+}
+.content .sign .continuous-sign ul li strong i {
+  font-size: 1rem;
+}
+.content .sign .continuous-sign ul li .info {
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#bc00e1), to(#8600bf));
+  border-radius: 0.25rem;
+  width: 16.95rem;
+  height: 3.75rem;
+  overflow: hidden;
+}
+.content .sign .continuous-sign ul li .info .icon {
+  width: 1.425rem;
+  height: 1.8rem;
+  display: block;
+  float: left;
+  background: url("../img/sign/sign_num_icon.png") no-repeat 50%;
+  background-size: 1.425rem;
+  font-size: 0.6rem;
+  color: #f66d39;
+  text-align: center;
+  line-height: 1.5rem;
+  margin: 1.25rem 0.75rem 0 1rem;
+}
+.content .sign .continuous-sign ul li .info .text {
+  display: block;
+  float: left;
+  height: 2.125rem;
+  line-height: 1.625rem;
+  font-size: 0.75rem;
+  color: #fff;
+  margin: 1.35rem 0 0;
+}
+.content .sign .continuous-sign ul li .info .text i {
+  font-size: 1.15rem;
+}
+.content .sign .continuous-sign ul li .info .btn {
+  float: right;
+  display: block;
+  border-radius: 0.25rem;
+  height: 1.5rem;
+  width: 4rem;
+  outline: none;
+  border: 0;
+  background: #8e8e8e;
+  color: #ebebeb;
+  font-size: 0.7rem;
+  font-weight: 400;
+  margin: 1.5rem 1rem 0 0;
+}
+.content .sign .continuous-sign ul li .info .noget {
+  background: #fc7c12;
+}
+@-moz-keyframes shake {
+  0% {
+    transform: scale3d(1, 1, 1) rotate(0);
+  }
+  100% {
+    transform: scale(1.2) rotate(10deg);
+  }
+}
+@-webkit-keyframes shake {
+  0% {
+    transform: scale3d(1, 1, 1) rotate(0);
+  }
+  100% {
+    transform: scale(1.2) rotate(10deg);
+  }
+}
+@-o-keyframes shake {
+  0% {
+    transform: scale3d(1, 1, 1) rotate(0);
+  }
+  100% {
+    transform: scale(1.2) rotate(10deg);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: scale3d(1, 1, 1) rotate(0);
+  }
+  100% {
+    transform: scale(1.2) rotate(10deg);
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/recharge.css">
+</head>
+<body>
+<div class="content">
+    <header>
+        <em onclick="back()"></em><span>购买娃娃豆</span><span onclick="goRecord()">交易明细</span>
+    </header>
+    <div class="banner">
+        <img src="img/account/recharge_banner.png" alt="">
+    </div>
+    <div class="box">
+        <ul>
+            <li data-value='6'>
+                <span><em>60</em>娃娃豆</span>
+                <span>额外赠送10</span>
+                <span>6元</span>
+            </li>
+            <li data-value="20">
+                <span><em>200</em>娃娃豆</span>
+                <span class="shower">首冲送100娃娃豆</span>
+                <span>20元</span>
+            </li>
+            <li data-value="50">
+                <span><em>500</em>娃娃豆</span>
+                <span>额外赠送60</span>
+                <span>50元</span>
+            </li>
+            <li data-value="80">
+                <span><em>800</em>娃娃豆</span>
+                <span>额外赠送120</span>
+                <span>80元</span>
+            </li>
+            <li data-value="150">
+                <span><em>1500</em>娃娃豆</span>
+                <span>额外赠送400</span>
+                <span>150元</span>
+            </li>
+            <li data-value="300">
+                <span><em>3000</em>娃娃豆</span>
+                <span>额外赠送1000</span>
+                <span>300元</span>
+            </li>
+        </ul>
+    </div>
+    <div class="submit">充值</div>
+</div>
+</body>
+<script src="libs/jquery/jquery2.1.3.min.js"></script>
+<script src="libs/rem/rem.js"></script>
+<script src="libs/fastclick/fastclick.js"></script>
+<script>
+    const rechargeC = {
+        cash_num: '',
+        isSelect: false,
+        _init() {
+            $('.box ul li').on('click', function () {
+                rechargeC.cash_num = $(this).data().value;
+                rechargeC.select_type($(this));
+            });
+            $(".submit").on('click', function () {
+                if (rechargeC.isSelect) {
+                    rechargeC.goRecharge()
+                } else {
+                    alert('请选择充值金额')
+                }
+
+            })
+        },
+        select_type(obj) {
+            $('.box ul li').removeClass('active');
+            obj.addClass('active');
+            rechargeC.isSelect = true
+        },
+        goRecharge() {
+            $.ajax({
+                url: "http://192.168.0.214:8080/mobile/user/info",
+                type:'post',
+                dataType: 'jsonp',
+                jsonp:'callback',
+                //data: rechargeC.cash_num,
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('token', '906E583C3EC11A3B955F0045CD3756A25325BD77232024FFD336508DC2C20E0675C7BECA78D6657812DCA86956C88FF3');
+                    xhr.setRequestHeader('Content-Type','application/json')
+                },
+
+                success: function (data) {
+                    console.log(data)
+                }
+            })
+        }
+    };
+    rechargeC._init();
+
+    function goRecord() {
+        location.href = 'dealRecord.html'
+    }
+
+    function back() {
+        window.history.back()
+    }
+
+</script>
+
+
+</html>
